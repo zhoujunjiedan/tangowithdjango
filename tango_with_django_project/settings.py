@@ -17,17 +17,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '($l#%93xgg)jjnba)w_9d36g))^h(_in1l&p(k4$du*hb$iu51'
+SECRET_KEY = '5m6p7+i(5n5@gfl7&7o#ncvqkiey!%#2n+qkm+8joj7srxe-q&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-STATICFILES_DIRS = [STATIC_DIR, ]
+
 
 # Application definition
 
@@ -54,9 +57,9 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
 TEMPLATES = [
-    {
+    {  
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':  [TEMPLATE_DIR,],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,16 +73,21 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
+STATICFILES_DIRS = [STATIC_DIR, ]
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -121,5 +129,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = MEDIA_DIR 
-MEDIA_URL = '/media/'
