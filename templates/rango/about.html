@@ -1,16 +1,14 @@
+
 {% extends 'rango/base.html' %}
-{% load staticfiles %}
-
-{% block title_block%}
-    Rango says here is the about page
-{% endblock %}
-
-{% block body_block%}
-    <h1>Rango says here is the about page</h1>
-    <p>visits: {{ visits }}</p>
-    <img src="{{MEDIA_URL}}cat.jpg" />
-    <div>
-        <img src="/static/images/cat.jpg" alt="Picture of cat" />
-        <img src="/media/cat.jpg" />
+{% load staticfiles %} 
+{% block title_block %} 
+About Page 
+{% endblock %} 
+{% block body_block %} 
+ 
+<div>
+        Rango says here is the about page. <br />
+        <p>visits: {{ visits }}</p>
+        <img src="/media/cat.jpg" alt="Picture of Rango" />
     </div>
 {% endblock %}
